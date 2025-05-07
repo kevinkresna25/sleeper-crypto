@@ -11,6 +11,7 @@ services:
       - sleeper-net
     volumes:
       - ./app:/app/app
+    restart: always
 
 networks:
   sleeper-net:
