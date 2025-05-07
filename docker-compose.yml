@@ -1,6 +1,9 @@
 services:
   sleeper-crypto:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: kevinkresna25/sleeper-crypto:latest
     container_name: sleeper-crypto
     ports:
       - "5000:5000"
