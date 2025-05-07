@@ -1,0 +1,15 @@
+services:
+  sleeper-crypto:
+    build: .
+    container_name: sleeper-crypto
+    ports:
+      - "5000:5000"
+    networks:
+      - sleeper-net
+    volumes:
+      - ./app:/app/app
+
+networks:
+  sleeper-net:
+    name: sleeper-net
+    driver: bridge
